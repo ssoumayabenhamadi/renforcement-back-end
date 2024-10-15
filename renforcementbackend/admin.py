@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Auteur, Categorie, Commentaire, Editeur, Emprunt, Evaluation, Exemplaire, Livre
+from renforcementbackend.models import Auteur, Categorie, Commentaire, Editeur, Emprunt, Evaluation, Exemplaire, Livre
 
 admin.site.register(Auteur)
 admin.site.register(Categorie)

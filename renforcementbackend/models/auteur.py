@@ -8,5 +8,7 @@ class Auteur(models.Model):
     nationalité = models.CharField(max_length=100)
     photo = models.ImageField(upload_to='photos_auteurs/', null=True, blank=True)
 
+
+
     def __str__(self):
         return self.nom

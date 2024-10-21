@@ -159,6 +159,17 @@ USE_I18N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'test@example.com' 
+EMAIL_HOST_PASSWORD = '@2tes217'   
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

@@ -8,3 +8,4 @@ from .evaluation import EvaluationViewSet
 from .exemplaire import ExemplaireViewSet
 from .auth import AuteurViewSet
 from .security import MySecureView
+from .loginotp  import login_with_otp

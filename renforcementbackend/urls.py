@@ -2,13 +2,14 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from rest_framework.routers import DefaultRouter
 from django.urls import path
-from .views import auteur, categorie, commentaire, editeur, emprunt, evaluation, exemplaire, livre  
+from .views import auteur, categorie, commentaire, editeur, emprunt, evaluation, exemplaire, livre, login_with_otp 
 from two_factor.urls import urlpatterns as tf_urls
+
 
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from rest_framework_simplejwt.views import (TokenObtainPairView,TokenRefreshView, TokenBlacklistView
+from rest_framework_simplejwt.views import (TokenObtainPairView,TokenRefreshView, TokenBlacklistView 
 )
 from rest_framework import permissions
 
@@ -44,6 +45,7 @@ urlpatterns = [
    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
    path('api/token/blacklist/', TokenBlacklistView.as_view(), name='token_blacklist'),
+   path('api/login_with_otp/', login_with_otp, name='login_with_otp'),
    path('', include(tf_urls)),  
 
 ]

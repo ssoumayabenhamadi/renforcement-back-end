@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'renforcementbackend',
     'drf_yasg',
     'rest_framework_simplejwt.token_blacklist',
+    'django_otp',
+    'django_otp.plugins.otp_totp',  
+    'two_factor',
+    'django_otp.plugins.otp_static',  
 ]
 
 RESTFRAMEWORK = {
@@ -59,8 +63,7 @@ RESTFRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle',
     ],
         'DEFAULT_THROTTLE_RATES': {
-        'auth': '5/minute', 
-        'anon': '10/minute',
+        'anon': '5/minute',
         'user': '10/minute',
     },
 
